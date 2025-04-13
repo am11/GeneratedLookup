@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="sample/SampleApp.csproj" />
+    <Project Path="src/GeneratedLookup.csproj" />
+    <Project Path="tests/GeneratedLookup.Tests.csproj" />
+  </Folder>
+</Solution>
