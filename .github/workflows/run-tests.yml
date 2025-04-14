@@ -1,0 +1,23 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.x
+    - name: Test (Debug)
+      run: dotnet test -c Debug -v:n
+    - name: Test (Release)
+      run: dotnet test -c Release -v:n
